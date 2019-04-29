@@ -7,3 +7,10 @@ export function getList(params) {
     params
   })
 }
+export function getListMnage(params) {
+  return request({
+    url: '/table/manage',
+    method: 'get',
+    params
+  })
+}

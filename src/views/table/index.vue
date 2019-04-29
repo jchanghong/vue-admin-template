@@ -15,17 +15,17 @@
       </el-table-column>
       <el-table-column label="Title">
         <template slot-scope="scope">
-          {{ scope.row.title }}
+          {{ scope.row.orgName }}
         </template>
       </el-table-column>
       <el-table-column label="Author" width="110" align="center">
         <template slot-scope="scope">
-          <span>{{ scope.row.author }}</span>
+          <span>{{ scope.row.orgId }}</span>
         </template>
       </el-table-column>
       <el-table-column label="Pageviews" width="110" align="center">
         <template slot-scope="scope">
-          {{ scope.row.pageviews }}
+          {{ scope.row.jobtimes }}
         </template>
       </el-table-column>
       <el-table-column class-name="status-col" label="Status" width="110" align="center">
@@ -45,6 +45,7 @@
 
 <script>
 import { getList } from '@/api/table'
+import { getListMnage } from '../../api/table'
 
 export default {
   filters: {
@@ -69,7 +70,8 @@ export default {
   methods: {
     fetchData() {
       this.listLoading = true
-      getList().then(response => {
+      getListMnage().then(response => {
+        console.info(response)
         this.list = response.data.items
         this.listLoading = false
       })

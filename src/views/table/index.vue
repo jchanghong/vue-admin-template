@@ -36,7 +36,7 @@
       <el-table-column align="center" prop="created_at" label="Display_time" width="200">
         <template slot-scope="scope">
           <i class="el-icon-time" />
-          <span>{{ scope.row.display_time }}</span>
+          <span>{{ scope.row.jobtimes }}</span>
         </template>
       </el-table-column>
     </el-table>

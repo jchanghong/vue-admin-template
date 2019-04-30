@@ -11,31 +11,30 @@ const data = Mock.mock({
   }]
 })
 const datamanage = Mock.mock({
-  'items|30': [
+  'items|40': [
     {
-    orgId: '@id',
-      orgName: '沙坪坝',
-      jobtimes: '2019/04/15 22:45:27',
-      version: '1',
-      itemcount: '@integer(300, 5000)',
-      erroritems: '@integer(300, 5000)',
-      onlineCount: '@integer(300, 5000)',
-      pushCount: '@integer(300, 5000)',
-      thirdCount: '@integer(300, 5000)',
-      third_erroritems: '@integer(300, 5000)',
-      nomalCount: '@integer(300, 5000)',
-      third_nomalCount: '@integer(300, 5000)',
-      nomalCountAll: '@integer(300, 5000)',
-      thirdOnlineCount: '@integer(300, 5000)',
-      percent_third_online: '@integer(300, 5000)',
-      percent_hundrund_number: '@integer(300, 5000)',
-      hundrund_number: '@integer(300, 5000)',
-      score_norm_number: '@integer(300, 5000)',
-      score_online: '@integer(300, 5000)',
-      score_self: '@integer(300, 5000)',
-      selfOnlineCount: '@integer(300, 5000)',
-      selfCount: '@integer(300, 5000)',
-      percent_self: '@integer(300, 5000)'
+       id : '@integer(1, 50)',
+       parentId : '@integer(1, 50)',
+       name :  '@sentence(1, 10)' ,
+       dbType : '@integer(0, 1)',
+       dburl :  '@integer(300, 5000)' ,
+       dbuser :  '@integer(300, 5000)' ,
+       dbpassword :  '@integer(300, 5000)' ,
+       jobtime :  '@datetime' ,
+       cmsCascadeId : '@integer(300, 5000)',
+       loginUser :  '@integer(300, 5000)' ,
+       loginPassword :  '@integer(300, 5000)' ,
+       xulie :  '@integer(300, 5000)' ,
+       police_number : '@integer(300, 5000)',
+       all_online : '@integer(300, 5000)',
+       all_all : '@integer(300, 5000)',
+       yz_online : '@integer(300, 5000)',
+       yz_all : '@integer(300, 5000)',
+       yz_normal : '@integer(300, 5000)',
+       other_online : '@integer(300, 5000)',
+       other_all : '@integer(300, 5000)',
+       other_normal : '@integer(300, 5000)',
+       push : '@integer(300, 5000)'
   }]
 })
 

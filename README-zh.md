@@ -1,4 +1,9 @@
 # vue-admin-template
+// 切换到原npm仓库
+npm config set registry https://registry.npm.taobao.org
+
+// 切换到公司npm仓库
+npm config set registry http://af.hikvision.com.cn/artifactory/api/npm/npm-publicsecurity/
 
 > 这是一个极简的 vue admin 管理后台。它只包含了 Element UI & axios & iconfont & permission control & lint，这些搭建后台必要的东西。
 

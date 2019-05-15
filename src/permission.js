@@ -77,8 +77,13 @@ router.beforeEach(async(to, from, next) => {
     // get user info
     // note: roles must be a object array! such as: ['admin'] or ,['developer','editor']
     console.info(to.fullPath)
-     await store.dispatch('user/login',{username:'admin',password:'pass'})
-   await extracted(to,next)
+    var param = getQueryParam(to.fullPath)
+    if (param && param.username && param.password) {
+      console.info('参数存在，开始登录，，，，，，')
+      await store.dispatch('user/login',{username:param.username,password:param.password})
+      await extracted(to,next)
+    }
+
     if (whiteList.indexOf(to.path) !== -1) {
       // in the free login whitelist, go directly
       next()
